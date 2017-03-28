@@ -1,54 +1,92 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>TMG's Blog</title>
-		<link type="text/css" rel="stylesheet" href="css/main.css"/>
+		<title>TMG's JAVA Blog</title>
+		<link type="text/css" rel="stylesheet" href="css/main.css" />
 	</head>
 	<body>
 		<div id="wrapper">
 			<div id="header">
-				<div id="logo">TMG's Blog</div>
+				<div id="logo">TMG's JAVA Blog</div>
 			</div>
 			<div id="content">
 				<div class="post">
-					<h1>Post Title</h1>
-					<p>This is a paragraph.</p>
-					<p>This is another paragraph.</p>
+					<h1>'switch' vs 'if/else'</h1>
+					<p>Q: What is the difference between 'switch' and 'if/else'? When would you use one versus the other?</p>
+					<p>'switch' is a set of multiple if/then instructions.</p>
+						<ul>
+							<li>For any variable (v), if v=x then run code x, if v=y then run code y, if v=z then run code z, etc....</li>
+						</ul>
+					<p>'if/else' is a set of exactly two if/then instructions.</p>
+						<ul>
+							<li>For any variable or condition (v), if v is true then run code v, if v is not true then run code ~v.</li>
+						</ul>
+					<p>Use 'switch' if a variable or condition has many possibilities and a different instruction is desired for each possibility.</p>
+					<p>Use 'if/else' if a variable or condition can only be true or false and a different instruction is desired depending on whether said condtion/variable is true or false.</p>
 				</div>
 				<div class="post">
-					<h1>Post Title</h1>
-					<p>This is a paragraph.</p>
-					<p>This is another paragraph.</p>
+					<h1>'=' vs '==' vs '.equals'</h1>
+					<p>Q: When would you use '=' versus '==' versus '.equals'? Explain what each of these does and in which cases you should use them.</p>
+					<p>'=' assigns a value to a variable.</p>
+						<ul>
+							<li>'x=10' means the variable (or object) called x is equal to (or contains) the number 10</li>
+							<li>Use '=' when you want to assign a value or certain contents in the case of a string to a variable</li>
+						</ul>
+					<p>'==' asks whether the operants refer to the same variable/object.</p>
+						<ul>
+							<li>e.g. if x=10 and y=10, it is not true that x == y because x and y are different variables/object and thus do not refer to the same variable/object.</li>
+							<li>Whereas, if x=10 and y=x, is is true that x == y becase x and y refer to same variable/object, namely x (x "contains" 10 while y is identical with x)</li>
+						</ul>
+					<p>'.equals', when used with Strings at least, overrides the question of whether one variable is identical with another (or is just another name for the same variable/object), and instead asks whether the contents of one variable is the same as the contents of the other.</p>
+						<ul>
+							<li>e.g. String x, y; x = "hello"; y= "hello"; x.equals(y) and x.equals("hello") are both true.</li>
+							<li>This is because '.equals' asks whether the contents of x ("hello") is the same as the contents of y ("hello") and if the contents of x is the same as "hello".</li>
+							<li>Use '.equals' when you want to compare the contents of two distinct variable/objects.</li>
+						</ul>
 				</div>
 				<div class="post">
-					<h1>Post Title</h1>
-					<p>This is a paragraph.</p>
-					<p>This is another paragraph.</p>
+					<h1>'Math.random()'</h1>
+					<p>Q: What is 'Math'? What is the return type of the 'random()' method? Why is 'M' in 'Math' capitalized?</p>
+					<p>'Math' is a class in Java which contains methods for performing basic numeric operations.</p>
+					<p>The return type of '.random()' method is a double value with a positive sign, which is greater than or equal to 0.0 and less than 1.0.</p>
+					<p>'Math' is capitalized to denote the fact that it is a static class and therefore requries no instantiation for the mathmatical methods contained in the class.</p>
+						<ul>
+							<li>e.g. the 'random()' method is already contained in, and therefore available to call from, the 'Math' class, it doesn't need to be defined.</li>
+						</ul>
 				</div>
 				<div class="post">
-					<h1>Post Title</h1>
-					<p>This is a paragraph.</p>
-					<p>This is another paragraph.</p>
+					<h1>Casting a double into an int</h1>
+					<p>Q: What does it mean to 'cast a double into an int'? When might you do this, and what is happening?</p>
+					<p>This phrase refers to putting the value of a double or floating-point variable (e.g. 1.234) into an integer variable (e.g 1, no decimal places)</p>
+					<p>You might do this if you want to round floating-point numbers to the nearest integer.</p>
+					<p>Basically, the decimal places are ignored (e.g. 1.567 becomes 1); so it's wise to add 0.5 to every double value cast into an integer such that rounding occurs as expected (i.e. < 0.5 rounds down, >or= 0.5 rounds up)</p>
 				</div>
 				<div class="post">
-					<h1>Post Title</h1>
-					<p>This is a paragraph.</p>
-					<p>This is another paragraph.</p>
+					<h1>Loops: 'for', 'while' and 'do-while'</h1>
+					<p>Q: What is the difference between a 'for', 'while' and 'do-while' loop? When would you use one versus another? What is the benefit of a 'do-while' over a 'while' loop?</p>
+					<p>'for' Loop: repeats a set of instructions for so long as a certain condition is true. This type of loop is typically used when the desired number of loops is known.</p>
+					<p>'while' Loop: repeats a set of instructions only if and for so long as a certain condition is true. This type of loop is typically used when the loop is desired only if a condition is true. NB: processor first checks 'while' condition, then runs the loop if such condition is satisfied.</p>
+					<p>'do-while' Loop: runs a set of instructions, then checks if a condition (c) is true, then runs the loop for so long as c is true. This type of loop is used when the loop is desired at least once regardles of whether the 'while' condition is true, and thereafter only if the 'while' conditon is true.</p>
+					<p>Thus, a 'do-while' is preferable over a 'while' if it is desired that the loop insturctions run once regardless of whether the 'while' condition is true.</p>
 				</div>
 				<div class="post">
-					<h1>Post Title</h1>
-					<p>This is a paragraph.</p>
-					<p>This is another paragraph.</p>
+					<h1>'import java.util.Scanner'</h1>
+					<p>What happens when you include 'import java.util.Scanner' in your code? Where does this functionality come from? What is "java" in 'java.util.Scanner'?</p>
+					<p>Using 'import java.util.Scanner' in your code imports the predefined Scanner class which allows a software user to make inputs.</p>
+					<p>This functionality comes from JAVA packages, which contain certain predefined classes; when certain features of a class are desrired, the keyword 'import' is used to access the desired class.</p>
+					<p>The 'java' in 'java.util.Scanner' refers to the top or highest ranking package for JAVA, which contains all JAVA packages and all predefined classes, such as the 'Scanner' class, for example.</p>
 				</div>
 				<div class="post">
-					<h1>Post Title</h1>
-					<p>This is a paragraph.</p>
-					<p>This is another paragraph.</p>
+					<h1>'void' in a method declaration</h1>
+					<p>Q: What is 'void' in a method declaration? How does this differ from declaring a method with a return type?</p>
+					<p>The use of 'void' in a method declaration indicates that the method does not return a value.</p>
+					<p>'void' is used when the called method doesn't return a value, whereas declaring a method with a return-type means that the selected return-type must be returned when the relevant method is run.</p>
 				</div>
 				<div class="post">
-					<h1>Post Title</h1>
-					<p>This is a paragraph.</p>
-					<p>This is another paragraph.</p>
+					<h1>Methods and the differnce between a 'parameter' and an 'argument'</h1>
+					<p>Q: What is the difference, if any, between a 'parameter' and an 'argument'? And when would you use one over the other?</p>
+					<p>A 'parameter' is a variable defined in a method, whereas an 'argument' is a specific value passed into such a variable.</p>
+					<p>You'd use 'parameter' to refer to the variable in a method, and you'd use 'argument' to refer to the value at any given time in a particular variable.</p>
 				</div>
 			</div>
 		</div>

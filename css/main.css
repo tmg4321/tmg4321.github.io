@@ -18,8 +18,8 @@ body {
   margin-bottom: 10px;
 }
 #logo {
-  text-shadow: 1px 1px 1px #eeeeee;
-  color: #ffffff;
+  text-shadow: 5px 5px 5px #ffffff;
+  color: blue;
   font-size: 36px;
   margin: 10px 0px 0px 10px;
 }
@@ -31,10 +31,21 @@ body {
 }
 h1 {
   font-size: 18px;
+  margin-bottom: 10px;
 }
 .post p {
   margin-bottom: 5px;
 }
-.post p: last-child {
+.post p:nth-child(2) {
+  color: blue;
+  font-size: 16px;
+}
+.post p:last-child {
   margin-bottom: 0px;
+}
+ul {
+  margin-left: 40px;
+}
+li:last-child {
+  margin-bottom: 10px;
 }
